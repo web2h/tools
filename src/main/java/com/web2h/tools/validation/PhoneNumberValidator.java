@@ -12,6 +12,6 @@ public class PhoneNumberValidator implements ConstraintValidator<PhoneNumber, St
 
 	@Override
 	public boolean isValid(String phoneNumber, ConstraintValidatorContext cxt) {
-		return phoneNumber == null || phoneNumber != null && phoneNumber.matches("[0-9]{10}");
+		return phoneNumber == null || phoneNumber != null && phoneNumber.matches("[0-9]{10}") && (phoneNumber.startsWith("06") || phoneNumber.startsWith("07"));
 	}
 }
