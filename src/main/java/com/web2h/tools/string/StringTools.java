@@ -23,6 +23,10 @@ public class StringTools {
 		return sensitiveData.replaceAll(".", "*");
 	}
 
+	public static String randomDidigts(int length) {
+		return RandomStringUtils.randomNumeric(length);
+	}
+
 	public static String random(int length) {
 		return RandomStringUtils.random(length, true, true);
 	}
